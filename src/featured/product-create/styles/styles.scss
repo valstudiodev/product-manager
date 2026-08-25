@@ -1,0 +1,55 @@
+@use '../../../shared/styles/settings/settings' as *;
+
+.add-product-form {
+  display: flex;
+  flex-direction: column;
+  gap: toRem(10);
+  align-items: flex-start;
+  background-color: lightgray;
+  padding: toRem(15);
+  max-width: toRem(400);
+  margin-bottom: toRem(40);
+  color: #000;
+  font-weight: 600;
+  border-radius: toRem(10);
+
+  &__field {
+    display: flex;
+    align-items: center;
+    gap: toRem(10);
+    width: 100%;
+
+    @media (max-width: toEm(460)) {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__title {}
+
+  &__input {
+    border: toRem(1) solid #000;
+    border-radius: toRem(10);
+    flex-grow: 1;
+    padding-block: toRem(3);
+    padding-left: toRem(10);
+  }
+
+  &__btn {
+    background-color: gray;
+    color: #fff;
+    border-radius: toRem(10);
+    padding-inline: toRem(20);
+    padding-block: toRem(8);
+    width: 100%;
+    cursor: pointer;
+    transition: opacity 0.3s;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  @media (max-width: toEm(700)) {
+    max-width: 100%;
+  }
+}

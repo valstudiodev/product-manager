@@ -1,0 +1,5 @@
+export { default as Header } from '@/widgets/header/Header'
+export { default as Footer } from '@/widgets/footer/Footer'
+export { default as MainLayout } from '@/widgets/mainLayout/ui/MainLayout'
+export { default as ProductForm } from '@/widgets/ProductForm/ui/ProductForm'
+export { default as ProductList } from '@/widgets/ProductList/ui/ProductList'

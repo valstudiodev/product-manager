@@ -1,0 +1,61 @@
+@use '../../../shared/styles/settings/settings' as*;
+@use '../../../shared/styles/mixins/mixins' as *;
+
+.product-card {
+  background-color: lightgrey;
+  border-radius: toRem(10);
+  overflow: hidden;
+
+
+  &__inner {
+    padding: toRem(15);
+  }
+
+  &__image-wrap {
+    aspect-ratio: 1;
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    gap: toRem(10);
+    min-height: 100%;
+  }
+
+  &__title {
+    @include adaptiveValue('font-size', 20, 16);
+    color: #000;
+  }
+
+  &__category {
+    display: flex;
+    align-items: center;
+    gap: toRem(10);
+    flex-wrap: wrap;
+    flex-grow: 1;
+
+    span {
+      text-transform: uppercase;
+      color: #000;
+    }
+  }
+
+  &__info {
+    display: flex;
+    align-items: center;
+    gap: toRem(10);
+    justify-content: space-between;
+  }
+
+  &__rating {
+    display: flex;
+    align-items: center;
+    gap: toRem(5);
+  }
+}

@@ -1,0 +1,20 @@
+@use '../../../shared/styles/settings/settings' as *;
+
+.product-filter {
+  background-color: lightgray;
+  color: #000;
+  border-radius: toRem(10);
+  padding-block: toRem(10);
+  padding-left: toRem(10);
+  margin-bottom: toRem(20);
+  width: 50%;
+  border: toRem(1) solid #fff;
+
+  &::placeholder {
+    color: #000;
+  }
+
+  @media (max-width: toEm(700)) {
+    width: 100%;
+  }
+}
