@@ -1,0 +1,1 @@
+export { default as HeadingTitle } from '@/shared/typography/headingTitle/HeadingTitle'

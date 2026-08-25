@@ -80,4 +80,14 @@ export interface CreateProductPayload {
   price: number;
   category: string;
   thumbnail?: string;
+  brand?: string;
 }
+
+export interface ProductFormState {
+  title: string;
+  price: string;
+  category: string;
+  thumbnail: string;
+  brand: string
+}
+

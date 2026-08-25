@@ -11,12 +11,20 @@ function ProductCard({
       className={`${className}`}
     >
       <div className={`${className}__inner`}>
-        <div className={`${className}__image-wrap`}>
-          <img
-            src={product.thumbnail}
-            alt={product.title}
-            className={`${className}__img`} />
-        </div>
+
+        {product.thumbnail ? (
+          <div className={`${className}__image-wrap`}>
+            <img
+              src={product.thumbnail}
+              alt={product.title}
+              className={`${className}__img`} />
+          </div>
+        ) : (
+          <div className={`${className}__image-placeholder`}>
+            No image
+          </div>
+        )}
+
         <div className={`${className}__body`}>
           <h3
             className={`${className}__title`}
@@ -31,12 +39,18 @@ function ProductCard({
             className={`${className}__info`}
           >
             <span>{product.price}$</span>
-            <div
-              className={`${className}__rating`}
-            >
-              <span>Rating:</span>
-              <span>{product.rating}</span>
-            </div>
+
+            {product.rating && (
+              <div className={`${className}__rating`}>
+                <span>Rating:</span>
+                <span>{product.rating}</span>
+              </div>
+            )}
+
+            {product.brand && (
+              <div>Brand:{product.brand}</div>
+            )}
+
           </div>
         </div>
       </div>

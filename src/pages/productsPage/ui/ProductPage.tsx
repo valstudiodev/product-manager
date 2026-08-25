@@ -5,14 +5,13 @@ import AddProductForm from "@/featured/product-create/ui/AddProductForm";
 import ProductFilter from "@/featured/product-filter/ui/ProductFilter";
 import Container from "@/shared/primitives/container/Container";
 import Section from "@/shared/primitives/section/Section";
+import { HeadingTitle } from "@/shared/typography";
 import { ProductList } from "@/widgets";
 import { useEffect } from "react";
 import { useSelector } from "react-redux";
 
 function ProductPage(): React.JSX.Element {
   const dispatch = useAppDispatch()
-
-  // const { items, status, error } = useAppSelector((state) => state.products)
 
   const status = useSelector(selectProductsStatus)
   const error = useSelector(selectProductsError)
@@ -40,10 +39,10 @@ function ProductPage(): React.JSX.Element {
   return (
     <Section className="product-page p-10">
       <Container className="relative">
-        <h1 className="text-4xl 
+        <HeadingTitle className="text-4xl 
         text-center mb-10">
           Products page
-        </h1>
+        </HeadingTitle>
         <AddProductForm />
         <ProductFilter />
         <ProductList />
