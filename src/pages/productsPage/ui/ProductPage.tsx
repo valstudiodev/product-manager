@@ -6,6 +6,7 @@ import ProductFilter from "@/featured/product-filter/ui/ProductFilter";
 import Container from "@/shared/primitives/container/Container";
 import Section from "@/shared/primitives/section/Section";
 import { HeadingTitle } from "@/shared/typography";
+import Paragraph from "@/shared/typography/paragraph/Paragraph";
 import { ProductList } from "@/widgets";
 import { useEffect } from "react";
 import { useSelector } from "react-redux";
@@ -43,6 +44,7 @@ function ProductPage(): React.JSX.Element {
         text-center mb-10">
           Products page
         </HeadingTitle>
+        <Paragraph />
         <AddProductForm />
         <ProductFilter />
         <ProductList />
