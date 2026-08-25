@@ -1,4 +1,4 @@
-import { useAppDispatch } from "@/app/store/hooks";
+import { useAppDispatch, useAppSelector } from "@/app/store/hooks";
 import { selectProducts, selectProductsError, selectProductsStatus } from "@/entities/product/model/productSelector";
 import { fetchProducts } from "@/entities/product/model/productThunk";
 import AddProductForm from "@/featured/product-create/ui/AddProductForm";
@@ -9,14 +9,13 @@ import { HeadingTitle } from "@/shared/typography";
 import Paragraph from "@/shared/typography/paragraph/Paragraph";
 import { ProductList } from "@/widgets";
 import { useEffect } from "react";
-import { useSelector } from "react-redux";
 
 function ProductPage(): React.JSX.Element {
   const dispatch = useAppDispatch()
 
-  const status = useSelector(selectProductsStatus)
-  const error = useSelector(selectProductsError)
-  const items = useSelector(selectProducts)
+  const status = useAppSelector(selectProductsStatus)
+  const error = useAppSelector(selectProductsError)
+  const items = useAppSelector(selectProducts)
 
   useEffect(() => {
     dispatch(fetchProducts())
